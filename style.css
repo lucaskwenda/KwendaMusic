@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+   
+}
+
+body{
+      background: #351d00;
+    
+}
+
+.app{
+    width: 600px;
+    height: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    overflow: hidden;
+
+}
+
+.player{
+    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: hidden;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.p1{
+    width: 220px;
+    height: 400px;  
+    float: left; 
+}
+.p2{
+    width: 300px;
+    height: 200px;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.p3{
+    float: right;
+    width: 300px;
+    height: 155px;
+}
+
+/* estili do primeiro player */
+
+.capa img{
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.capa img:hover{transform: scale(1.2);}
+.info-music{
+    text-align: center;
+    color: #fff;
+
+}
+.info-music h2{font-size: 20px;}
+.info-music p{margin-top: 10px;}
+
+.controls{
+    width: 80%;
+    /* background: red; */
+    margin: auto;
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+button{
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:active{
+    scale: 1.1;
+}
+button:hover{
+    scale: 1.1;
+}
+.progresbar{
+    position: relative;
+    background: #ddd;
+    content: "";
+    height: 5px;
+    width: 100%;
+    display: block;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+.stausmusic{
+    height: 5px;
+    width: 0%;
+    display: block;
+  
+    background-color: rgb(5, 36, 214);
+    border-radius: 10px;
+  
+    position: absolute;
+    
+  }
+
+.time{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #c4c4cc;
+    opacity: 0.7;
+}
+
+/* Fim do estilo do primeiro player */
+
+/* Estilo do segundo player */
+.p2 .capa img{
+    width: 70px;
+    float: left;
+   
+} 
+.p2 .info-music{margin-top: 25px;}
+.p2 .info-music h2{font-size: 18px;} 
+.p2 .info-music p{font-size: 12px;}
+
+.p2 .controls{
+    margin-left: 70px;
+    width: 150px;
+}
+.p2 .progresbar{margin-top: 20px;}
+.p2 .stausmusic{width: 85%;}
+
+/* Fim do estilo do segundo player */
+
+
+
+/* estilo do terceiro player */
+.p3 .capa img{
+    width: 64px;
+    float: left;
+
+}
+.p3 .info-music{margin-top: 20px;}
+
+.p3 .info-music h2{font-size: 18px;}
+.p3 .info-music p{font-size: 12px;}
+
+.p3 .controls{
+    margin-left: 80px;
+    width: 150px;
+}
+
+/* Fim do terceiro player */
+
+/* configurando o tamanho da tela  */
+
+@media (max-width: 680px){
+    body{
+        box-sizing: border-box;
+    }
+    .app{
+        display: flex;
+        flex-direction: column;
+
+        max-width: 370px;
+        margin: auto;
+      
+        height: auto;
+    }
+    .player{margin: auto; margin-bottom: 20px;}
+
+}
